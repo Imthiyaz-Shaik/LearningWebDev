@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#outer-border{
+    border:1px solid black;
+    width:160px;
+    height:310px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin:100px 100px 100px 350px;
+
+}
+#cal-inp{
+    border:1px solid rgb(81, 77, 77);
+    height:40px;
+    width:130px;
+    margin-top:4px;
+
+}
+button{
+    width:40px;
+height:40px;
+margin-left:4px;
+}
