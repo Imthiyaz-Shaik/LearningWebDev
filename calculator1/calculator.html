@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>CALCULATOR</title>
+</head>
+<body>
+    <div id="outer-border">
+   
+        <input id="cal-inp"  type="text" readonly>
+    
+    <button 
+    onclick=" output=''; document.querySelector('#cal-inp').value=output;">C</button>
+    <button
+    onclick=" output=output+'1';document.querySelector('#cal-inp').value=output;">1</button>
+    <button  onclick=" output=output+'2'; document.querySelector('#cal-inp').value=output;">2</button>
+
+    <button  onclick=" output=output+'+'; document.querySelector('#cal-inp').value=output;">+</button>
+
+    <button  onclick=" output=output+'3'; document.querySelector('#cal-inp').value=output;">3</button>
+
+    <button  onclick=" output=output+'4'; document.querySelector('#cal-inp').value=output;">4</button>
+
+    <button  onclick=" output=output+'-'; document.querySelector('#cal-inp').value=output;">-</button>
+
+    <button  onclick=" output=output+'5';document.querySelector('#cal-inp').value=output;" >5</button>
+
+    <button  onclick=" output=output+'6'; document.querySelector('#cal-inp').value=output;">6</button>
+
+    <button  onclick=" output=output+'*'; document.querySelector('#cal-inp').value=output;">*</button>
+
+    <button  onclick=" output=output+'7'; document.querySelector('#cal-inp').value=output;">7</button>
+
+    <button  onclick=" output=output+'8'; document.querySelector('#cal-inp').value=output;">8</button>
+
+    <button  onclick=" output=output+'/'; document.querySelector('#cal-inp').value=output;">/</button>
+
+    <button  onclick="
+    output=eval(output);; document.querySelector('#cal-inp').value=output;">=</button>
+
+    <button  onclick=" output=output+'9'; document.querySelector('#cal-inp').value=output;">9</button>
+
+    <button  onclick=" output=output+'0'; document.querySelector('#cal-inp').value=output;">0</button>
+
+    <button  onclick=" output=output+'.'; document.querySelector('#cal-inp').value=output;">.</button>
+</div>
+<script src="calculator.js"></script>
+</body>
+</html>
