@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cricket proj</title>
+    <title>BatBallStump</title>
     <style>
         body{
             text-align:center;
@@ -14,65 +14,39 @@
     <h1>Bat Ball Stump Game</h1>
     <button 
     onclick="
+
+   let computerChoice=getcomputerChoice();
+
+   let resultMsg=getResultMsg('Bat',computerChoice);
+
+
+   alert(`you have chosen bat,computer choice is ${computerChoice} and ${resultMsg}`);"
+    
+    
+    >Bat</button>
+
+
+    <button  onclick="
    
-  let computerChoice= ComputerGeneratedChoice();
-
-   let resultMsg;
-   if(computerChoice=='Bat')
-   {
-    resultMsg=' it is a tie';
-   } 
-   else if(computerChoice=='Ball')
-   {
-    resultMsg='user has won';
-   }
-   else if(computerChoice=='Stump')
-   {
-    resultMsg='computer has won';
-   }
-
-   alert(`you have chosen bat,computer choice is ${computerChoice} and ${resultMsg}`)
-   ">Bat</button>
-
-<button 
-onclick="
-
-computerChoice=ComputerGeneratedChoice()
-
-if(computerChoice=='Bat')
-{
-resultMsg=' computer has won';
-} else if(computerChoice=='Ball')
-{
-resultMsg='it is a tie';
-}else if(computerChoice=='Stump')
-{
-resultMsg='computer has won';
-}
-
-alert(`you have chosen ball,computer choice is ${computerChoice} and ${resultMsg}`)
-">Ball</button>
+     computerChoice=getcomputerChoice();
    
-   <button 
-onclick="
+     resultMsg=getResultMsg('Ball',computerChoice);
 
-computerChoice=ComputerGeneratedChoice()
+   alert(`you have chosen ball,computer choice is ${computerChoice} and ${resultMsg}`);"
+    
+    >Ball</button>
 
-if(computerChoice=='Bat')
-{
-resultMsg=' user has won';
-} else if(computerChoice=='Ball')
-{
-resultMsg=' user has won';
-}
-else if(computerChoice=='Stump')
-{
-resultMsg='it is a tie';
-}
+    <button 
+    onclick="
+   
+    computerChoice=getcomputerChoice();
+    resultMsg=getResultMsg('Stump',computerChoice);
+    
 
-alert(`you have chosen stump,computer choice is ${computerChoice} and ${resultMsg}`)
-">Stump</button>
+   alert(`you have chosen stump,computer choice is ${computerChoice} and ${resultMsg}`);"
+    
+    >Stump</button>
 
-<script src="bbs.js"></script>
+    <script src="bbs.js"></script>
 </body>
 </html>
