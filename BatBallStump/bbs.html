@@ -15,90 +15,64 @@
     <button 
     onclick="
    
-    let randomNumber=Math.random()*3;
-    let computerChoice;
+   ComputerGeneratedChoice()
 
-    if(randomNumber>0 && randomNumber<1)
-    {
-        computerChoice='Bat';
-    }
-    else if(randomNumber<2)
-    {
-        computerChoice='Ball';
-    }
-    else (randomNumber<3)
-    {
-        computerChoice='Stump';
-    }
+   let resultMsg;
+   if(computerChoice=='Bat')
+   {
+    resultMsg=' it is a tie';
+   } 
+   else if(computerChoice=='Ball')
+   {
+    resultMsg='user has won';
+   }
+   else if(computerChoice=='Stump')
+   {
+    resultMsg='computer has won';
+   }
 
-    let resultMsg;
-    if(computerChoice ==='ball')
-    {
-        resultMsg='user has won';
-    }
-    else if(computerChoice ==='bat')
-    {
-        resultMsg='it is a tie';
-    }
-    else(computerChoice ==='stump')
-    {
-        resultMsg='computer has won';
-    }
+   alert(`you have chosen bat,computer choice is ${computerChoice} and ${resultMsg}`)
+   ">Bat</button>
 
-   alert(`you have chosen bat,computer choice is ${computerChoice} and ${resultMsg}`);"
-    
-    
-    >Bat</button>
+<button 
+onclick="
 
+ComputerGeneratedChoice()
 
-    <button  onclick="
+if(computerChoice=='Bat')
+{
+resultMsg=' computer has won';
+} else if(computerChoice=='Ball')
+{
+resultMsg='it is a tie';
+}else if(computerChoice=='Stump')
+{
+resultMsg='computer has won';
+}
+
+alert(`you have chosen ball,computer choice is ${computerChoice} and ${resultMsg}`)
+">Ball</button>
    
+   <button 
+onclick="
 
-   let randomNumber=Math.random()*3;
-    let computerChoice;
+ComputerGeneratedChoice()
 
-    if(randomNumber>0 && randomNumber<1)
-    {computerChoice='Bat'; }
-    else if(randomNumber<2)
-    {computerChoice='Ball';}
-    else (randomNumber<3)
-    {computerChoice='Stump';}
+if(computerChoice=='Bat')
+{
+resultMsg=' user has won';
+} else if(computerChoice=='Ball')
+{
+resultMsg=' user has won';
+}
+else if(computerChoice=='Stump')
+{
+resultMsg='it is a tie';
+}
 
-     let resultMsg;
-    if(computerChoice ==='ball')
-    {resultMsg='it is a tie'; }
-    else if(computerChoice ==='bat')
-    {resultMsg='computer has won';}
-    else(computerChoice ==='stump')
-    {resultMsg='computer has won'; }
+alert(`you have chosen stump,computer choice is ${computerChoice} and ${resultMsg}`)
+">Stump</button>
 
-   alert(`you have chosen ball,computer choice is ${computerChoice} and ${resultMsg}`);"
-    
-    >Ball</button>
-
-    <button 
-    onclick="
-    let randomNumber=Math.random()*3;
-    let computerChoice;
-
-    if(randomNumber>0 && randomNumber<1)
-    {computerChoice='Bat'; }
-    else if(randomNumber<2)
-    {computerChoice='Ball';}
-    else (randomNumber<3)
-    {computerChoice='Stump';}
-
-     let resultMsg;
-    if(computerChoice ==='ball')
-    {resultMsg='user has won'; }
-    else if(computerChoice ==='bat')
-    {resultMsg='user has won';}
-    else(computerChoice ==='stump')
-    {resultMsg='it is a tie'; }
-
-   alert(`you have chosen stump,computer choice is ${computerChoice} and ${resultMsg}`);"
-    
-    >Stump</button>
-
+<script src="bbs.js"></script>
 </body>
 </html>
