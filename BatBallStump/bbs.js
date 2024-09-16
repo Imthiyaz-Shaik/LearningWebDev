@@ -1,4 +1,4 @@
-let computerChoice;
+
 
 function ComputerGeneratedChoice()
 {
@@ -7,12 +7,12 @@ function ComputerGeneratedChoice()
 
     if(randomNumber >0 && randomNumber <=1)
 
-    {computerChoice='Bat';}
+    {return'Bat';}
 
     else if(randomNumber >1 && randomNumber <=2)
 
-        { computerChoice='Ball'; }
+        { return'Ball'; }
 
     else
-     { computerChoice='Stump'; }
+     { return'Stump'; }
 }
