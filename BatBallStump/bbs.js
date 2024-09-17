@@ -1,4 +1,9 @@
+let score={
+   win:0,
+   lost:0,
+   tie:0,
 
+};
 function getcomputerChoice(){
     let randomNumber=Math.random()*3;
     console.log(randomNumber);
@@ -21,21 +26,38 @@ function getResultMsg(userChoice,computerChoice)
 {
 if(userChoice===computerChoice)
 {
+   score.tie++;
    return 'it is a tie';
+   
 }
 else if(computerChoice==='Stump' )
 {
+   score.lost++;
 return 'computer has won';
 }
 else if( userChoice==='Stump')
 {
+   score.win++;
    return 'user has won';
 }
 else if(computerChoice==='Bat'&& userChoice==='Ball')
 {
+   score.lost++;
    return 'compter has won';
 }
 else{
+   score.win++;
    return 'user has won';
 }
+}
+
+function alertMsg(userChoice,computerChoice,resultMsg)
+{
+  return   alert(`you have chosen ${userChoice},computer choice is ${computerChoice} 
+      
+      ${resultMsg}
+      
+      won:${score.win},lost:${score.lost} and tie:${score.tie}
+      `);
+    
 }
