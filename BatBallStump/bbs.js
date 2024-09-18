@@ -11,6 +11,18 @@ let score = JSON.parse(scoreStr) || {
     `;
  }
 
+ function resetScore(){
+   score={
+      win:0,
+      lost:0,
+      tie:0,
+      displayScore : function(){
+         return` No of matches won:${score.win},lost:${score.lost} and tie:${score.tie}
+          `;
+   }
+ }
+}
+
 function getcomputerChoice(){
     let randomNumber=Math.random()*3;
     console.log(randomNumber);
