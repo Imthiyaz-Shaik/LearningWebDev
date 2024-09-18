@@ -4,12 +4,13 @@ let score = JSON.parse(scoreStr) || {
    win:0,
    lost:0,
    tie:0,
+  
 };
 
-   score.displayScore = function(){
-   return` No of matches won:${score.win},lost:${score.lost} and tie:${score.tie}
+score.displayScore = function(){
+   return `score:won:${score.win},lost:${score.lost} and tie:${score.tie}
     `;
- }
+ };
 
  function resetScore(){
    score={
@@ -17,7 +18,7 @@ let score = JSON.parse(scoreStr) || {
       lost:0,
       tie:0,
       displayScore : function(){
-         return` No of matches won:${score.win},lost:${score.lost} and tie:${score.tie}
+         return `score:won:${score.win},lost:${score.lost} and tie:${score.tie}
           `;
    }
  }
@@ -74,9 +75,14 @@ function alertMsg(userChoice,computerChoice,resultMsg)
 {
 localStorage.setItem('score',JSON.stringify(score));
 
-  return   alert(`you have chosen ${userChoice},computer choice is ${computerChoice} 
+//   return   alert(`you have chosen ${userChoice},computer choice is ${computerChoice} 
       
-   ${resultMsg}
+//    ${resultMsg}
       
-   ${score.displayScore()}` );
+//    ${score.displayScore()}` );
+
+   document.querySelector('#user-choice').innerText=`you have chosen ${userChoice}`;
+document.querySelector('#computer-choice').innerText=`computer choice is ${computerChoice} `;
+document.querySelector('#result').innerText=resultMsg;
+document.querySelector('#score').innerText=score.displayScore();
 }

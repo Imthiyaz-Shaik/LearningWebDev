@@ -46,9 +46,14 @@
     
     >Stump</button>
 
-    <button onclick="resetScore();
-    "
-    >Reset</button>
+    <button onclick="localStorage.clear(score);
+     resetScore();
+    " >Reset</button>
+
+    <h3 id="user-choice"></h3>
+    <h3 id="computer-choice"></h3>
+    <h3 id="result"></h3>
+    <h3 id="score"></h3>
 
     <script src="bbs.js"></script>
 </body>
