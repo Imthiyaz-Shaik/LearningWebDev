@@ -8,6 +8,16 @@
         body{
             text-align:center;
         }
+
+        #ballImg{
+            width:69px;
+            height:69px;
+             
+        }
+        #stumpImg{
+            width:34px;
+            height:69px;
+        }
     </style>
 </head>
 <body>
@@ -23,7 +33,7 @@
    alertMsg('Bat',computerChoice,resultMsg);"
     
     
-    >Bat</button>
+    ><img src="images/bat.png" id="batImg" alt="Bat-img"></button>
 
 
     <button  onclick="
@@ -33,7 +43,7 @@
      resultMsg=getResultMsg('Ball',computerChoice);
 
      alertMsg('Ball',computerChoice,resultMsg);
-   ">Ball</button>
+   "><img src="images/ball.png" id="ballImg" alt="Ball-img"></button>
 
     <button 
     onclick="
@@ -44,16 +54,18 @@
 
     alertMsg('Stump',computerChoice,resultMsg);"
     
-    >Stump</button>
-
-    <button onclick="localStorage.clear(score);
-     resetScore();
-    " >Reset</button>
+    ><img src="images/stump.png" id="stumpImg" alt="Stump-img"></button>
 
     <h3 id="user-choice"></h3>
     <h3 id="computer-choice"></h3>
     <h3 id="result"></h3>
     <h3 id="score"></h3>
+
+    
+    <button onclick="localStorage.clear(score);
+     resetScore();
+    " >Reset</button>
+
 
     <script src="bbs.js"></script>
 </body>
