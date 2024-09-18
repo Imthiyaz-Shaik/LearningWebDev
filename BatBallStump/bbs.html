@@ -4,25 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BatBallStump</title>
-    <style>
-        body{
-            text-align:center;
-        }
-
-        #ballImg{
-            width:69px;
-            height:69px;
-             
-        }
-        #stumpImg{
-            width:34px;
-            height:69px;
-        }
-    </style>
+    <link rel="stylesheet" href="bbs.css">
 </head>
 <body>
     <h1>Bat Ball Stump Game</h1>
-    <button 
+    <button class="choice-button"
     onclick="
 
    let computerChoice=getcomputerChoice();
@@ -33,19 +19,18 @@
    alertMsg('Bat',computerChoice,resultMsg);"
     
     
-    ><img src="images/bat.png" id="batImg" alt="Bat-img"></button>
+    ><img src="images/bat.png" class="choiceImg" alt="choice-img"></button>
 
 
-    <button  onclick="
-   
-     computerChoice=getcomputerChoice();
+    <button  class="choice-button"
+     onclick="computerChoice=getcomputerChoice();
    
      resultMsg=getResultMsg('Ball',computerChoice);
 
      alertMsg('Ball',computerChoice,resultMsg);
-   "><img src="images/ball.png" id="ballImg" alt="Ball-img"></button>
+   "><img src="images/ball.png" class="choiceImg" alt="Ball-img"></button>
 
-    <button 
+    <button  class="choice-button"
     onclick="
    
     computerChoice=getcomputerChoice();
@@ -54,7 +39,7 @@
 
     alertMsg('Stump',computerChoice,resultMsg);"
     
-    ><img src="images/stump.png" id="stumpImg" alt="Stump-img"></button>
+    ><img src="images/stump.png" class="choiceImg" alt="Stump-img"></button>
 
     <h3 id="user-choice"></h3>
     <h3 id="computer-choice"></h3>
