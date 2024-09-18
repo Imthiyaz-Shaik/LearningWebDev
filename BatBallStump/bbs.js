@@ -3,6 +3,10 @@ let score={
    lost:0,
    tie:0,
 
+   displayScore: function(){
+     return` No of matches won:${this.win},lost:${this.lost} and tie:${this.tie}
+      `;
+   }
 };
 function getcomputerChoice(){
     let randomNumber=Math.random()*3;
@@ -55,9 +59,7 @@ function alertMsg(userChoice,computerChoice,resultMsg)
 {
   return   alert(`you have chosen ${userChoice},computer choice is ${computerChoice} 
       
-      ${resultMsg}
+   ${resultMsg}
       
-      won:${score.win},lost:${score.lost} and tie:${score.tie}
-      `);
-    
+   ${score.displayScore()}` );
 }
