@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    height:100%;
+    width:100%;
+    text-align:center;
+}
+
+#main-heading{
+    font-family: arial;
+}
+
+
+.container{
+   
+display:grid;
+grid-template-columns: 200px 125px 100px;
+row-gap:10px;
+column-gap:10px;
+margin-left:450px;
+margin-top:10px;
+}

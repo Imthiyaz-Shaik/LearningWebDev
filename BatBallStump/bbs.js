@@ -19,8 +19,7 @@ score.displayScore = function(){
       tie:0,
       displayScore : function(){
          return `score:won:${score.win},lost:${score.lost} and tie:${score.tie}
-          `;
-   }
+          `;}
  }
 }
 
@@ -81,8 +80,8 @@ localStorage.setItem('score',JSON.stringify(score));
       
 //    ${score.displayScore()}` );
 
-   document.querySelector('#user-choice').innerText=`you have chosen ${userChoice}`;
-document.querySelector('#computer-choice').innerText=`computer choice is ${computerChoice} `;
-document.querySelector('#result').innerText=resultMsg;
+   document.querySelector('#user-choice').innerText=userChoice ?`you have chosen ${userChoice}`:'';
+document.querySelector('#computer-choice').innerText=computerChoice ?`computer choice is ${computerChoice} `:'';
+document.querySelector('#result').innerText=resultMsg ? resultMsg:'';
 document.querySelector('#score').innerText=score.displayScore();
 }
