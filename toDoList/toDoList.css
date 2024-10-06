@@ -7,11 +7,12 @@
 body{
     height:100%;
     width:100%;
-    text-align:center;
+   
 }
 
 #main-heading{
     font-family: arial;
+ margin-left:570px
 }
 
 
@@ -22,5 +23,34 @@ grid-template-columns: 200px 125px 100px;
 row-gap:10px;
 column-gap:10px;
 margin-left:450px;
-margin-top:10px;
+margin-top:20px;
+
+}
+
+#toDo-input,#toDo-date{
+height:40px;
+padding:10px 5px;
+font-size: 15px;
+}
+
+#add-button{
+    background-color: green;
+    border-radius: 10px;
+    color:white;
+    border:none;
+    border-radius: 10px;
+    cursor:pointer;
+}
+
+span{
+    padding:10px 10px 10px 3px;
+}
+
+#dlt-button{
+    background-color:crimson;
+    height:40px;
+    border-radius:10px;
+    color:white;
+    border:none;
+    cursor:pointer;
 }

@@ -1,14 +1,10 @@
-let toDoList=[
-  {
-    item:'buy milk',
-    dueDate:'25/09/2024',
-  },
-  {
-    item:'prepare oats',
-    dueDate:'25/09/2024',
-  }
-];
-displayItems();
+
+ let toDoList=[];
+let storedData=JSON.parse(localStorage.getItem('storeToDoList'));
+   toDoList=[storedData];
+   toDoList.push(storedData);
+   addToDo();
+
 
 function addToDo(){
     let toDoInput=document.querySelector('#toDo-input');
@@ -21,19 +17,28 @@ function addToDo(){
     displayItems();
 }
 
+
 function displayItems(){
     let containerElement=document.querySelector('#display-container');
-    let newHtml='';
+    let newHtml= '';
   for(let i=0;i < toDoList.length;i++){
-    let item=toDoList[i].item;
-    let dueDate=toDoList[i].dueDate;
+   let {item,dueDate}=toDoList[i];
    newHtml+=`
-   <span>${item}</span>
-   <span>${dueDate}</span>
-   <button onclick="toDoList.splice(${i},1);
-   displayItems();">Delete</button>
+   <span id="toDo-span1">${item}</span>
+   <span id="toDo-span2">${dueDate}</span>
+   <button id="dlt-button" onclick="toDoList.splice(${i},1);
+   displayItems();
+   localStorage.removeItem(toDoList[i].item);
+   localStorage.removeItem(toDoList[i].dueDate);
+   ">Delete</button>
    `;
   }
 containerElement.innerHTML=newHtml;
+storeData();
+   
+}
+
+function storeData(){
+  localStorage.setItem('storeToDoList',JSON.stringify(toDoList));
 }
 
