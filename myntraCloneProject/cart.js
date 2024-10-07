@@ -417,6 +417,9 @@ function displayProducts(products){
 
 function displayBagSummary(){
    let bagSummaryElement=document.querySelector('.bag-summary');
+   if(bagItemsObjects.length===0){
+    bagSummaryElement.innerHTML='';
+   }
     let totalItem=bagItemsObjects.length;
     totalMRP=0;
     totalDiscount=0;
@@ -456,9 +459,11 @@ function displayBagSummary(){
   
 
 function displayBagItems(){
+  let containersContainer=document.getElementById("bag-page")
   let container=document.getElementById('bag-items-container');
   if(bagItemsObjects.length===0){
-    container.innerHTML=`<div id="empty-bag" >BAG IS EMPTY</div>`;
+    container.innerHTML='';
+    containersContainer.innerText="ADD ITEMS TO CHECK OUT";
   }else{
 bagItemsObjects.forEach((bagItem,index)=>{
 const itemDiv=document.createElement('div');
