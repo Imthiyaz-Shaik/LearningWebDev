@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO DO LIST</title>
     <link rel="stylesheet" href="toDoList.css">
+    <title>To Do List</title>
 </head>
 <body>
-    <h1 id="main-heading">ToDo App</h1>
-    <div class="container" id="input-container">
-    <input  id="toDo-input" placeholder="      Enter TODO here">
-    <input id="toDo-date" type="date">
-    <button id="add-button" onclick="addToDo()">Add</button>
-    </div> 
-   <div id="display-container" class="container"></div>
-  <script src="toDoList.js"></script>  
+    <div id="container">
+        <h1>To Do App</h1>
+        <div id="inp">
+            <input id="task-input" type="text" placeholder="Enter your task here">
+            <button id="add-button" onclick="addTask();"> Add</button>
+        </div>
+       <ul id="task-list">
+       </ul>
+    </div>
+    <script src="toDoList.js"></script>
 </body>
 </html>

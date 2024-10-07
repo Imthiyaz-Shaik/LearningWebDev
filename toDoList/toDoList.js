@@ -1,44 +1,37 @@
+let inputContainer=document.getElementById("task-input");
+let taskContainer=document.getElementById("task-list");
 
- let toDoList=[];
-let storedData=JSON.parse(localStorage.getItem('storeToDoList'));
-   toDoList=[storedData];
-   toDoList.push(storedData);
-   addToDo();
-
-
-function addToDo(){
-    let toDoInput=document.querySelector('#toDo-input');
-    let toDoDate=document.querySelector('#toDo-date');
-    let inputElement=toDoInput.value;
-    let dateElement=toDoDate.value;
-    toDoList.push({item:inputElement,dueDate:dateElement});
-    toDoInput.value='';
-    toDoDate.value='';
-    displayItems();
+// taskContainer.innerHTML=localStorage.getItem("listItems");
+function addTask(){
+    if(inputContainer.value===0){
+        alert("you have to write your task first")
+    }else{
+        let li=document.createElement("li");
+        li.innerHTML=inputContainer.value;
+        taskContainer.appendChild(li);
+        let span=document.createElement("span");
+        span.innerHTML="\u00d7";
+        li.appendChild(span);
+    }
+    storeTheList();
+    inputContainer.value='';
 }
 
+taskContainer.addEventListener("click",function(e){
+if(e.target.tagName==="LI"){
+    e.target.classList.toggle("checked");
+    storeTheList();
+}
+else if(e.target.tagName==="SPAN"){
+  e.target.parentElement.remove();
+  storeTheList();}
+},false);
 
-function displayItems(){
-    let containerElement=document.querySelector('#display-container');
-    let newHtml= '';
-  for(let i=0;i < toDoList.length;i++){
-   let {item,dueDate}=toDoList[i];
-   newHtml+=`
-   <span id="toDo-span1">${item}</span>
-   <span id="toDo-span2">${dueDate}</span>
-   <button id="dlt-button" onclick="toDoList.splice(${i},1);
-   displayItems();
-   localStorage.removeItem(toDoList[i].item);
-   localStorage.removeItem(toDoList[i].dueDate);
-   ">Delete</button>
-   `;
-  }
-containerElement.innerHTML=newHtml;
-storeData();
-   
+function storeTheList(){
+    localStorage.setItem("listItems",taskContainer.innerHTML);
 }
 
-function storeData(){
-  localStorage.setItem('storeToDoList',JSON.stringify(toDoList));
+function showTheList(){
+    taskContainer.innerHTML=localStorage.getItem("listItems");
 }
-
+showTheList();

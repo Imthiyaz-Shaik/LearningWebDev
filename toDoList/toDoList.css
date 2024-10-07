@@ -1,56 +1,107 @@
 *{
-    margin: 0;
+    margin:0;
     padding:0;
-    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
 }
 
 body{
-    height:100%;
+   background: linear-gradient(135deg,#210517,#445e7684);
     width:100%;
-   
+    height:100vh;
 }
 
-#main-heading{
-    font-family: arial;
- margin-left:570px
+#container{
+    background-color: white;
+    width:500px;
+    min-height: 300px;
+    border-radius: 10px;
+    margin-left:33%;
+    margin-top:5%;
+    padding-top:20px;
 }
 
-
-.container{
-   
-display:grid;
-grid-template-columns: 200px 125px 100px;
-row-gap:10px;
-column-gap:10px;
-margin-left:450px;
-margin-top:20px;
-
+h1{
+    margin-left:33%;
 }
 
-#toDo-input,#toDo-date{
-height:40px;
-padding:10px 5px;
-font-size: 15px;
+#inp{
+    background-color: rgb(233, 231, 229);
+    min-width: 350px;
+    width:400px;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top:5%;
+    margin-left:10%;
+    padding-left:10px ;
+    border-radius:30px;
+}
+
+#task-input{
+    flex:1;
+    color:#210517;
+    background: transparent;
+    border:none;
+    outline: none;
+    padding:10px;
 }
 
 #add-button{
-    background-color: green;
-    border-radius: 10px;
-    color:white;
+    color:#210517;
     border:none;
-    border-radius: 10px;
+    outline:none;
+    padding:10px 50px;
+    font-size: 16px;;
+    background: rgb(242, 159, 52);
+    border-radius:40px;
+   cursor:pointer;
+}
+
+ul{
+    margin-top:15px;
+}
+ul li {
+    list-style: none;
+    padding:20px 12px 10px 75px;
+    font-size: 17px;
+    cursor:pointer;
+    user-select: none;
+    position:relative;
+}
+ul li::before{
+    content: '';
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position:center;
+    top:20px;
+    left:40px;
     cursor:pointer;
 }
-
-span{
-    padding:10px 10px 10px 3px;
+ul li.checked{
+    color:#555;
+    text-decoration: line-through;
 }
 
-#dlt-button{
-    background-color:crimson;
+ul li.checked::before{
+    background-image: url("images/checked.webp");
+}
+
+ul li span{
+    position:absolute;
+    right:50px;
+    width:40px;
     height:40px;
-    border-radius:10px;
-    color:white;
-    border:none;
-    cursor:pointer;
+    font-size:1em;
+    border-radius:50%;
+    color:#555;
+    line-height:37px;
+    text-align: center;
+}
+ul li span:hover{
+    background-color: #e0c8d8;
 }
