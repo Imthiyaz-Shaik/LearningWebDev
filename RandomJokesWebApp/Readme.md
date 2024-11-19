@@ -10,13 +10,13 @@ The **Random Jokes Web Application** is a simple and fun web app that fetches an
 -Includes error handling for failed API requests.
 
 ##📋 How to Use
-1,Clone the repository:
-```https://github.com/your-username/random-jokes-web-app.git
+-Clone the repository:
+https://github.com/your-username/random-jokes-web-app.git
 
-2,Navigate to the project directory:
+-Navigate to the project directory:
 cd random-jokes-web-app
 
-3,Open the index.html file in a browser to view the app.
+-Open the index.html file in a browser to view the app.
 
 ---
 
