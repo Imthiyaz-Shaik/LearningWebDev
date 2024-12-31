@@ -51,9 +51,6 @@ body {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, box-shadow 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 2rem;
     color: #2C6E49;
 }

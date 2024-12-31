@@ -39,8 +39,8 @@ function checkWinner() {
         if (
             boxes[a].innerText === boxes[b].innerText &&
             boxes[a].innerText === boxes[c].innerText &&
-            boxes[a].innerText !== ""
-        ) {
+            boxes[a].innerText !== "")
+        {
             return true; // There is a winner
         }
         return false; // No winner found in this pattern
