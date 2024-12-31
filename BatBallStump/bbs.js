@@ -12,16 +12,25 @@ score.displayScore = function(){
     `;
  };
 
- function resetScore(){
-   score={
-      win:0,
-      lost:0,
-      tie:0,
-      displayScore : function(){
-         return `score:won:${score.win},lost:${score.lost} and tie:${score.tie}
-          `;}
- }
+ function resetScore() {
+   score = {
+       win: 0,
+       lost: 0,
+       tie: 0,
+       displayScore: function () {
+           return `score:won:${score.win},lost:${score.lost} and tie:${score.tie}`;
+       }
+   };
+
+   localStorage.setItem('score', JSON.stringify(score));
+
+   // Update the DOM
+   document.querySelector('#user-choice').innerText = '';
+   document.querySelector('#computer-choice').innerText = '';
+   document.querySelector('#result').innerText = '';
+   document.querySelector('#score').innerText = score.displayScore();
 }
+
 
 function getcomputerChoice(){
     let randomNumber=Math.random()*3;
